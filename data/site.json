@@ -39,44 +39,162 @@
   ],
   "publications": [
     {
-      "year": "2025",
-      "venue": "ACML 2024 · PMLR",
+      "year": "2024",
+      "venue": "ACML · Best Paper Runner-Up",
       "title": "Diffusion Model Based Posterior Sampling for Noisy Linear Inverse Problems",
       "authors": "Xiangming Meng, Yoshiyuki Kabashima",
-      "summary": "A closed-form likelihood-score approximation for faster posterior sampling with diffusion and flow-based priors.",
-      "url": "https://proceedings.mlr.press/v260/meng25a.html"
+      "summary": "A closed-form likelihood-score approximation that avoids backpropagation and accelerates posterior sampling for noisy linear inverse problems.",
+      "url": "https://arxiv.org/abs/2211.12343",
+      "code": "https://github.com/mengxiangming/dmps"
+    },
+    {
+      "year": "2024",
+      "venue": "AAAI",
+      "title": "QCS-SGM+: Improved Quantized Compressed Sensing with Score-Based Generative Models",
+      "authors": "Xiangming Meng, Yoshiyuki Kabashima",
+      "summary": "Expectation propagation makes score-based quantized compressed sensing effective for general sensing matrices.",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/29347",
+      "code": "https://github.com/mengxiangming/QCS-SGM-plus"
     },
     {
       "year": "2023",
       "venue": "ICLR",
       "title": "Quantized Compressed Sensing with Score-Based Generative Models",
       "authors": "Xiangming Meng, Yoshiyuki Kabashima",
-      "summary": "Score-based generative priors for reconstructing high-dimensional signals from noisy, quantized measurements.",
-      "url": "https://openreview.net/forum?id=OOWLRfAI_V_"
+      "summary": "A pretrained score prior and noise-perturbed pseudo-likelihood enable posterior sampling and uncertainty estimates from quantized measurements.",
+      "url": "https://openreview.net/forum?id=OOWLRfAI_V_",
+      "code": "https://github.com/mengxiangming/QCS-SGM"
+    },
+    {
+      "year": "2023",
+      "venue": "AISTATS",
+      "title": "On Model Selection Consistency of Lasso for High-Dimensional Ising Models",
+      "authors": "Xiangming Meng, Tomoyuki Obuchi, Yoshiyuki Kabashima",
+      "summary": "A rigorous account of model-selection consistency and sample complexity for Lasso in high-dimensional Ising models.",
+      "url": "https://proceedings.mlr.press/v206/meng23a.html"
     },
     {
       "year": "2021",
       "venue": "NeurIPS",
       "title": "Ising Model Selection Using ℓ₁-Regularized Linear Regression: A Statistical Mechanics Analysis",
       "authors": "Xiangming Meng, Tomoyuki Obuchi, Yoshiyuki Kabashima",
-      "summary": "A statistical-mechanics account of sample complexity and finite-size learning behavior in Ising model selection.",
+      "summary": "Replica analysis characterizes O(log N) sample complexity and finite-sample precision and recall for Ising graph recovery.",
       "url": "https://proceedings.neurips.cc/paper/2021/hash/31917677a66c6eddd3ab1f68b0679e2f-Abstract.html"
+    },
+    {
+      "year": "2021",
+      "venue": "IEEE JSAC",
+      "title": "Advanced NOMA Receivers From a Unified Variational Inference Perspective",
+      "authors": "Xiangming Meng, Lei Zhang, Chao Wang, Lei Wang, Yiqun Wu, Yan Chen, Wenjin Wang",
+      "summary": "A unified variational-inference view connects BP, EP, VEP, AMP, VAMP, and classical NOMA receivers.",
+      "url": "https://ieeexplore.ieee.org/document/9181630"
+    },
+    {
+      "year": "2020",
+      "venue": "ICML",
+      "title": "Training Binary Neural Networks using the Bayesian Learning Rule",
+      "authors": "Xiangming Meng, Roman Bachmann, Mohammad Emtiyaz Khan",
+      "summary": "A Bayesian learning rule yields a principled method for binary neural networks with uncertainty estimation and continual learning.",
+      "url": "https://proceedings.mlr.press/v119/meng20a.html",
+      "code": "https://github.com/team-approx-bayes/BayesBiNN"
+    },
+    {
+      "year": "2018",
+      "venue": "IEEE Signal Processing Letters",
+      "title": "A Unified Bayesian Inference Framework for Generalized Linear Models",
+      "authors": "Xiangming Meng, Sheng Wu, Jiang Zhu",
+      "summary": "Expectation propagation reduces generalized linear models to standard linear subproblems and unifies several message-passing algorithms.",
+      "url": "https://arxiv.org/abs/1712.10288",
+      "code": "https://github.com/mengxiangming/glmcode"
     }
   ],
+  "principalInvestigator": {
+    "name": "Xiangming Meng",
+    "nameZh": "孟祥明",
+    "role": "Principal Investigator",
+    "title": "Assistant Professor · PhD Supervisor",
+    "titleZh": "研究员、助理教授、博士生导师",
+    "affiliation": "ZJU–UIUC Institute, Zhejiang University",
+    "bio": "His research connects information theory, signal processing, and statistical physics, with a focus on probabilistic graphical models, Bayesian inference, learning algorithms, and deep generative models for inverse problems.",
+    "email": "xiangmingmeng@intl.zju.edu.cn",
+    "homepage": "https://mengxiangming.github.io/",
+    "profile": "https://person.zju.edu.cn/xiangmingmeng",
+    "photo": "/people/xiangming-meng.jpg",
+    "photoSource": "https://zjui.intl.zju.edu.cn/en/team/teacherinfo/2082"
+  },
   "people": [
     {
-      "name": "Xiangming Meng",
-      "nameZh": "孟祥明",
-      "initials": "XM",
-      "role": "Principal Investigator",
-      "title": "Research Professor · Assistant Professor · PhD Supervisor",
-      "affiliation": "ZJU–UIUC Institute, Zhejiang University",
-      "bio": "Research at the intersection of machine learning, information theory, signal processing, and statistical mechanics.",
-      "email": "xiangmingmeng@intl.zju.edu.cn",
-      "homepage": "https://mengxiangming.github.io/",
-      "profile": "https://person.zju.edu.cn/xiangmingmeng"
+      "name": "袁钰林",
+      "group": "phd",
+      "role": "PhD Student",
+      "roleZh": "博士生",
+      "photo": "/people/yuan-yulin.jpeg"
+    },
+    {
+      "name": "谷昀瞳",
+      "group": "phd",
+      "role": "PhD Student",
+      "roleZh": "博士生",
+      "photo": "/people/gu-yuntong.png"
+    },
+    {
+      "name": "戚鹤镪",
+      "group": "phd",
+      "role": "PhD Student",
+      "roleZh": "博士生",
+      "photo": "/people/qi-heqiang.png"
+    },
+    {
+      "name": "屠骁",
+      "group": "phd",
+      "role": "PhD Student",
+      "roleZh": "博士生",
+      "photo": "/people/tu-xiao.png"
+    },
+    {
+      "name": "王棂煜",
+      "group": "master",
+      "role": "Master's Student",
+      "roleZh": "硕士生",
+      "photo": "/people/wang-lingyu.png"
+    },
+    {
+      "name": "夏笑",
+      "group": "master",
+      "role": "Master's Student",
+      "roleZh": "硕士生",
+      "photo": "/people/xia-xiao.png"
+    },
+    {
+      "name": "涂宇轩",
+      "group": "master",
+      "role": "Master's Student",
+      "roleZh": "硕士生",
+      "photo": "/people/tu-yuxuan.png"
+    },
+    {
+      "name": "蓝郑挺",
+      "group": "master",
+      "role": "Master's Student",
+      "roleZh": "硕士生",
+      "photo": "/people/lan-zhengting.png"
+    },
+    {
+      "name": "贾秀哲",
+      "group": "master",
+      "role": "Master's Student",
+      "roleZh": "硕士生",
+      "photo": "/people/jia-xiuzhe.jpeg"
+    },
+    {
+      "name": "孙天漫",
+      "group": "master",
+      "role": "Master's Student",
+      "roleZh": "硕士生",
+      "photo": "/people/sun-tianman.png"
     }
   ],
+  "newsNote": "For items sourced from the PI homepage, dates indicate when the item first appeared in its public revision history.",
   "news": [
     {
       "date": "2026.09.29",
@@ -85,16 +203,60 @@
       "url": "#top"
     },
     {
-      "date": "2026.09.12",
-      "type": "Open resource",
-      "title": "Diffusion + Flow Reading Map launched with a curated learning-resources section.",
-      "url": "https://zju-pil-lab.github.io/diffusion-flow-reading-map/"
+      "date": "2026.09.25",
+      "type": "Publication",
+      "title": "Visual-Redundancy-Controlled Parallel Decoding for Diffusion-Based Multimodal Large Language Models was accepted to NeurIPS 2026.",
+      "url": "https://arxiv.org/abs/2605.25820",
+      "source": "https://github.com/mengxiangming/mengxiangming.github.io/commit/4b6134adf729a6b7c62c1fcd6b6b71628c9b1e48"
     },
     {
-      "date": "2026.09.04",
-      "type": "Open resource",
-      "title": "dLLM Reading Map launched for students and researchers.",
-      "url": "https://zju-pil-lab.github.io/dllm-reading-map/"
+      "date": "2026.08.21",
+      "type": "Publication",
+      "title": "Cluster-Level Attention-Guided Parallel Decoding for Masked Diffusion Language Models was accepted to Findings of EMNLP 2026.",
+      "url": "https://arxiv.org/abs/2605.29607",
+      "source": "https://github.com/mengxiangming/mengxiangming.github.io/commit/b4bb3ac740658c85d90a6df8dff5853c74931760"
+    },
+    {
+      "date": "2026.08.21",
+      "type": "Service",
+      "title": "Xiangming Meng will serve as an Area Chair for ICLR 2027.",
+      "url": "https://iclr.cc/",
+      "source": "https://github.com/mengxiangming/mengxiangming.github.io/commit/b4bb3ac740658c85d90a6df8dff5853c74931760"
+    },
+    {
+      "date": "2026.05.13",
+      "type": "Service",
+      "title": "Xiangming Meng will serve as an Area Chair for NeurIPS 2026.",
+      "url": "https://neurips.cc/",
+      "source": "https://github.com/mengxiangming/mengxiangming.github.io/commit/fda264a4ae8a1d8806566fe55f53613e9709e541"
+    },
+    {
+      "date": "2025.06.26",
+      "type": "Publication",
+      "title": "UST-SSM: Unified Spatio-Temporal State Space Models for Point Cloud Video Modeling was accepted to ICCV 2025.",
+      "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Li_UST-SSM_Unified_Spatio-Temporal_State_Space_Models_for_Point_Cloud_Video_ICCV_2025_paper.html",
+      "source": "https://github.com/mengxiangming/mengxiangming.github.io/commit/62d95fc1c7512ad376d2fe54fb6dafbc0f3630b0"
+    },
+    {
+      "date": "2025.04.17",
+      "type": "Highlight",
+      "title": "SCSA: A Plug-and-Play Semantic Continuous-Sparse Attention for Arbitrary Semantic Style Transfer was selected as a CVPR 2025 Highlight.",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Shang_SCSA_A_Plug-and-Play_Semantic_Continuous-Sparse_Attention_for_Arbitrary_Semantic_Style_CVPR_2025_paper.html",
+      "source": "https://github.com/mengxiangming/mengxiangming.github.io/commit/dfe2e374e1819928157e4fe83940aea01fc0f619"
+    },
+    {
+      "date": "2025.01.31",
+      "type": "Publication",
+      "title": "FIG: Flow with Interpolant Guidance for Linear Inverse Problems was accepted to ICLR 2025.",
+      "url": "https://openreview.net/forum?id=fs2Z2z3GRx",
+      "source": "https://github.com/mengxiangming/mengxiangming.github.io/commit/0135c7a450afe7fe85f9aee209cbe1f10213daeb"
+    },
+    {
+      "date": "2024.12.09",
+      "type": "Award",
+      "title": "The DMPS paper received the ACML 2024 Best Paper Runner-Up Award.",
+      "url": "https://arxiv.org/abs/2211.12343",
+      "source": "https://github.com/mengxiangming/mengxiangming.github.io/commit/083d0bfdbf647e69bc1959506137d56cb40cdf9c"
     }
   ],
   "resources": [

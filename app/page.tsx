@@ -1,9 +1,14 @@
+import Image from 'next/image';
 import ResearchField from '@/components/research-field';
 import siteData from '@/data/site.json';
 
 const externalProps = { target: '_blank', rel: 'noreferrer' } as const;
 
 export default function Home() {
+  const pi = siteData.principalInvestigator;
+  const phdStudents = siteData.people.filter((person) => person.group === 'phd');
+  const mastersStudents = siteData.people.filter((person) => person.group === 'master');
+
   return (
     <main id="top">
       <a className="skip-link" href="#main-content">Skip to content</a>
@@ -18,6 +23,7 @@ export default function Home() {
           <a href="#work">Selected work</a>
           <a href="#people">People</a>
           <a href="#resources">Resources</a>
+          <a href="#news">News</a>
         </div>
         <a className="nav-contact" href="#contact">Contact <span>↘</span></a>
       </nav>
@@ -43,9 +49,9 @@ export default function Home() {
 
         <section className="lab-strip" aria-label="Laboratory overview">
           <div><span>Institution</span><strong>Zhejiang University</strong></div>
-          <div><span>Core lens</span><strong>Probability · Learning · Intelligence</strong></div>
+          <div><span>Team</span><strong>1 PI · 4 PhD · 6 Master&apos;s</strong></div>
+          <div><span>Research span</span><strong>Inference · Generation · Intelligence</strong></div>
           <div><span>Open resources</span><strong>2 research reading maps</strong></div>
-          <div className="lab-status"><i /> ACTIVE · 2026</div>
         </section>
 
         <section className="section about-section" id="about">
@@ -97,20 +103,24 @@ export default function Home() {
                 <p className="eyebrow"><span /> SELECTED WORK</p>
                 <h2 id="work-title">Representative<br />publications</h2>
               </div>
-              <p>A compact selection across diffusion-based inverse problems and statistical learning. Publication metadata links to primary records.</p>
+              <p>Eight representative works across generative inverse problems, statistical learning, Bayesian inference, and signal processing. Each entry links to its primary record.</p>
             </header>
             <div className="publication-list">
               {siteData.publications.map((publication, index) => (
-                <a className="publication-row" href={publication.url} {...externalProps} key={publication.title}>
+                <article className="publication-row" key={publication.title}>
                   <span className="publication-index">{String(index + 1).padStart(2, '0')}</span>
                   <div className="publication-main">
                     <p className="publication-meta">{publication.year} · {publication.venue}</p>
-                    <h3>{publication.title}</h3>
+                    <h3><a href={publication.url} {...externalProps}>{publication.title}</a></h3>
                     <p className="publication-authors">{publication.authors}</p>
                     <p className="publication-summary">{publication.summary}</p>
+                    <div className="publication-actions">
+                      <a href={publication.url} {...externalProps}>Paper ↗</a>
+                      {'code' in publication && publication.code ? <a href={publication.code} {...externalProps}>Code ↗</a> : null}
+                    </div>
                   </div>
-                  <span className="publication-arrow" aria-hidden="true">↗</span>
-                </a>
+                  <a className="publication-arrow" aria-label={`Open ${publication.title}`} href={publication.url} {...externalProps}>↗</a>
+                </article>
               ))}
             </div>
             <a className="text-link light-link" href="https://mengxiangming.github.io/" {...externalProps}>View the PI&apos;s full publication list <span>↗</span></a>
@@ -121,31 +131,69 @@ export default function Home() {
           <header className="section-heading people-heading">
             <p className="eyebrow"><span /> PEOPLE</p>
             <h2>People behind<br />the research.</h2>
-            <p>Member profiles are added only after their information has been confirmed.</p>
+            <p>One principal investigator and ten graduate researchers working across theory, algorithms, and modern generative intelligence.</p>
           </header>
           <div className="people-content">
-            {siteData.people.map((person) => (
-              <article className="person-card" key={person.email}>
-                <div className="person-monogram" aria-hidden="true">
-                  <span>{person.initials}</span><i />
+            <article className="person-card pi-card">
+              <a className="person-photo" href={pi.photoSource} {...externalProps} aria-label="Official ZJUI profile for Xiangming Meng">
+                <Image src={pi.photo} alt="Xiangming Meng" fill sizes="(max-width: 760px) 150px, 220px" />
+                <span>OFFICIAL PHOTO · ZJUI ↗</span>
+              </a>
+              <div className="person-info">
+                <p className="person-role">{pi.role}</p>
+                <h3>{pi.name} <span>{pi.nameZh}</span></h3>
+                <p className="person-title">{pi.title}<br />{pi.titleZh}<br />{pi.affiliation}</p>
+                <p className="person-bio">{pi.bio}</p>
+                <div className="person-links">
+                  <a href={pi.homepage} {...externalProps}>Homepage ↗</a>
+                  <a href={pi.profile} {...externalProps}>ZJU profile ↗</a>
+                  <a href={`mailto:${pi.email}`}>Email ↗</a>
                 </div>
-                <div className="person-info">
-                  <p className="person-role">{person.role}</p>
-                  <h3>{person.name} <span>{person.nameZh}</span></h3>
-                  <p className="person-title">{person.title}<br />{person.affiliation}</p>
-                  <p className="person-bio">{person.bio}</p>
-                  <div className="person-links">
-                    <a href={person.homepage} {...externalProps}>Homepage ↗</a>
-                    <a href={person.profile} {...externalProps}>ZJU profile ↗</a>
-                    <a href={`mailto:${person.email}`}>Email ↗</a>
-                  </div>
-                </div>
-              </article>
-            ))}
-            <div className="member-placeholder">
-              <span>LAB MEMBERS</span>
-              <p>Student and alumni profiles<br />will be added after confirmation.</p>
-              <i>COMING SOON</i>
+              </div>
+            </article>
+
+            <div className="student-group">
+              <div className="student-group-heading">
+                <div><span>01</span><p>DOCTORAL RESEARCHERS</p></div>
+                <h3>博士生 <span>PhD students</span></h3>
+                <p>{phdStudents.length} members</p>
+              </div>
+              <div className="member-grid">
+                {phdStudents.map((person) => (
+                  <article className="member-card" key={person.name}>
+                    <div className="member-photo">
+                      <Image src={person.photo} alt={person.name} fill sizes="(max-width: 760px) 45vw, 180px" />
+                    </div>
+                    <div className="member-info">
+                      <p>{person.role}</p>
+                      <h4>{person.name}</h4>
+                      <span>{person.roleZh}</span>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="student-group">
+              <div className="student-group-heading">
+                <div><span>02</span><p>MASTER&apos;S RESEARCHERS</p></div>
+                <h3>硕士生 <span>Master&apos;s students</span></h3>
+                <p>{mastersStudents.length} members</p>
+              </div>
+              <div className="member-grid">
+                {mastersStudents.map((person) => (
+                  <article className="member-card" key={person.name}>
+                    <div className="member-photo">
+                      <Image src={person.photo} alt={person.name} fill sizes="(max-width: 760px) 45vw, 180px" />
+                    </div>
+                    <div className="member-info">
+                      <p>{person.role}</p>
+                      <h4>{person.name}</h4>
+                      <span>{person.roleZh}</span>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -193,6 +241,10 @@ export default function Home() {
                 </a>
               );
             })}
+          </div>
+          <div className="news-footer">
+            <p>{siteData.newsNote}</p>
+            <a href="https://mengxiangming.github.io/" {...externalProps}>More updates on the PI homepage ↗</a>
           </div>
         </section>
 
