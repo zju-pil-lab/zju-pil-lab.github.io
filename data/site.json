@@ -143,7 +143,7 @@
     "title": "Assistant Professor · PhD Supervisor",
     "titleZh": "研究员、助理教授、博士生导师",
     "affiliation": "ZJU–UIUC Institute, Zhejiang University",
-    "bio": "His research interests include probabilistic graphical models, Bayesian inference, learning algorithms, and deep generative models for inverse problems, drawing on methods from information theory, signal processing, and statistical physics.",
+    "bio": "His research focuses on probabilistic generative modeling, diffusion and flow models, diffusion language models, and learning algorithms for high-dimensional inference and inverse problems.",
     "email": "xiangmingmeng@intl.zju.edu.cn",
     "homepage": "https://mengxiangming.github.io/",
     "profile": "https://person.zju.edu.cn/xiangmingmeng",
@@ -264,13 +264,6 @@
       "title": "UST-SSM: Unified Spatio-Temporal State Space Models for Point Cloud Video Modeling was accepted to ICCV 2025.",
       "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Li_UST-SSM_Unified_Spatio-Temporal_State_Space_Models_for_Point_Cloud_Video_ICCV_2025_paper.html",
       "source": "https://github.com/mengxiangming/mengxiangming.github.io/commit/62d95fc1c7512ad376d2fe54fb6dafbc0f3630b0"
-    },
-    {
-      "date": "2025.04.17",
-      "type": "Highlight",
-      "title": "SCSA: A Plug-and-Play Semantic Continuous-Sparse Attention for Arbitrary Semantic Style Transfer was selected as a CVPR 2025 Highlight.",
-      "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Shang_SCSA_A_Plug-and-Play_Semantic_Continuous-Sparse_Attention_for_Arbitrary_Semantic_Style_CVPR_2025_paper.html",
-      "source": "https://github.com/mengxiangming/mengxiangming.github.io/commit/dfe2e374e1819928157e4fe83940aea01fc0f619"
     },
     {
       "date": "2025.01.31",

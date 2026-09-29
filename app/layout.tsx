@@ -3,6 +3,34 @@ import './globals.css';
 
 const siteUrl = new URL('https://zju-pil-lab.github.io/');
 
+const themeScript = `
+  (() => {
+    const storageKey = 'pil-color-theme';
+    const root = document.documentElement;
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    const getSavedTheme = () => {
+      try {
+        const saved = window.localStorage.getItem(storageKey);
+        return saved === 'light' || saved === 'dark' ? saved : null;
+      } catch {
+        return null;
+      }
+    };
+    const applyTheme = () => {
+      const theme = getSavedTheme() ?? (media.matches ? 'dark' : 'light');
+      root.dataset.theme = theme;
+      root.style.colorScheme = theme;
+    };
+    applyTheme();
+    media.addEventListener('change', () => {
+      if (!getSavedTheme()) applyTheme();
+    });
+    window.addEventListener('storage', (event) => {
+      if (event.key === storageKey) applyTheme();
+    });
+  })();
+`;
+
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
@@ -29,7 +57,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>{children}</body>
     </html>
   );

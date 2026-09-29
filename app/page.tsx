@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ThemeToggle from '@/components/theme-toggle';
 import siteData from '@/data/site.json';
 
 const externalProps = { target: '_blank', rel: 'noreferrer' } as const;
@@ -30,7 +31,10 @@ export default function Home() {
             <a href="#resources">Resources</a>
             <a href="#news">News</a>
           </div>
-          <a className="nav-contact" href={`mailto:${pi.email}`}>Contact</a>
+          <div className="nav-actions">
+            <ThemeToggle />
+            <a className="nav-contact" href={`mailto:${pi.email}`}>Contact</a>
+          </div>
         </div>
       </nav>
 
