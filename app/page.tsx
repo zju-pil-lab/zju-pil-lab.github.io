@@ -85,7 +85,7 @@ export default function Home() {
             </p>
             <p className="institution-line">
               Based at the <a href="https://zjui.intl.zju.edu.cn/en" {...externalProps}>ZJU–UIUC Institute ↗</a>
-              <span>1 principal investigator · 10 graduate researchers</span>
+              <span>1 principal investigator · 10 graduate researchers · 1 visiting student</span>
             </p>
           </div>
         </section>
@@ -152,7 +152,8 @@ export default function Home() {
           </header>
           <div className="section-body people-content">
             <p className="section-intro">
-              PIL Lab currently includes one principal investigator, four PhD students, and six master&apos;s students.
+              PIL Lab currently includes one principal investigator, four PhD students, six master&apos;s students,
+              and one visiting student.
             </p>
 
             <article className="pi-profile">
@@ -186,7 +187,11 @@ export default function Home() {
                     <div className="member-photo">
                       <Image src={person.photo} alt={person.name} fill sizes="(max-width: 760px) 45vw, 190px" />
                     </div>
-                    <h4>{person.name}</h4>
+                    <h4>
+                      {'homepage' in person && person.homepage
+                        ? <a href={person.homepage} {...externalProps}>{person.name}</a>
+                        : person.name}
+                    </h4>
                     <p>{person.role}</p>
                   </article>
                 ))}
@@ -206,6 +211,28 @@ export default function Home() {
                     </div>
                     <h4>{person.name}</h4>
                     <p>{person.role}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="student-group visitor-group">
+              <div className="student-heading">
+                <h3>Visiting student <span>访问学生</span></h3>
+                <p>{siteData.visitingStudents.length} visitor</p>
+              </div>
+              <div className="visitor-list">
+                {siteData.visitingStudents.map((visitor) => (
+                  <article className="visitor-row" key={visitor.name}>
+                    <div>
+                      <h4>
+                        <a href={visitor.homepage} {...externalProps}>{visitor.name}</a>
+                        <span>{visitor.nameZh}</span>
+                      </h4>
+                      <p>{visitor.role}</p>
+                    </div>
+                    <p>{visitor.affiliation}</p>
+                    <time>{visitor.period}</time>
                   </article>
                 ))}
               </div>

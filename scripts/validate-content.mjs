@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const contentPath = path.resolve('data/site.json');
 const data = JSON.parse(fs.readFileSync(contentPath, 'utf8'));
-const requiredCollections = ['research', 'publications', 'people', 'news', 'resources'];
+const requiredCollections = ['research', 'publications', 'people', 'visitingStudents', 'news', 'resources'];
 
 for (const key of requiredCollections) {
   if (!Array.isArray(data[key]) || data[key].length === 0) {
@@ -27,7 +27,13 @@ const localImages = [pi.photo];
 for (const person of data.people) {
   if (!['phd', 'master'].includes(person.group)) throw new Error(`Invalid group for ${person.name}`);
   if (!person.name || !person.role || !person.roleZh) throw new Error(`Incomplete member record: ${person.name}`);
+  if (person.homepage) externalUrls.push(person.homepage);
   localImages.push(person.photo);
+}
+
+for (const visitor of data.visitingStudents) {
+  if (!visitor.name || !visitor.affiliation || !visitor.period) throw new Error(`Incomplete visitor record: ${visitor.name}`);
+  externalUrls.push(visitor.homepage);
 }
 
 for (const image of localImages) {
@@ -63,5 +69,6 @@ if (phdCount !== 4 || mastersCount !== 6) {
 
 console.log(
   `Validated ${data.research.length} research areas, ${data.publications.length} publications, ` +
-  `1 PI, ${data.people.length} students, ${data.news.length} news items, and ${data.resources.length} resources.`,
+  `1 PI, ${data.people.length} students, ${data.visitingStudents.length} visiting student, ` +
+  `${data.news.length} news items, and ${data.resources.length} resources.`,
 );

@@ -56,7 +56,8 @@
       "title": "Visual-Redundancy-Controlled Parallel Decoding for Diffusion-Based Multimodal Large Language Models",
       "authors": "Yulin Yuan, Hongshuo Zhao, Xiangming Meng",
       "summary": "A training-free decoder uses token-to-image attention to select visually complementary positions and reduce redundancy during parallel diffusion decoding.",
-      "url": "https://arxiv.org/abs/2605.25820"
+      "url": "https://arxiv.org/abs/2605.25820",
+      "code": "https://github.com/zju-pil-lab/VRCD"
     },
     {
       "year": "2026",
@@ -156,7 +157,8 @@
       "group": "phd",
       "role": "PhD Student",
       "roleZh": "博士生",
-      "photo": "/people/yuan-yulin.jpeg"
+      "photo": "/people/yuan-yulin.jpeg",
+      "homepage": "https://infiniteyuanyl.github.io/"
     },
     {
       "name": "谷昀瞳",
@@ -220,6 +222,16 @@
       "role": "Master's Student",
       "roleZh": "硕士生",
       "photo": "/people/sun-tianman.png"
+    }
+  ],
+  "visitingStudents": [
+    {
+      "name": "Ying Zhang",
+      "nameZh": "张赢",
+      "role": "Visiting Student",
+      "affiliation": "University of Cambridge",
+      "period": "July–September 2026",
+      "homepage": "https://yingurt001.github.io/"
     }
   ],
   "newsNote": "For archived items, dates are based on the first public update of the PI homepage.",
