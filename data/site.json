@@ -1,0 +1,122 @@
+{
+  "research": [
+    {
+      "id": "probabilistic-inference",
+      "index": "01",
+      "label": "Inference",
+      "title": "Probabilistic inference",
+      "titleZh": "概率推断",
+      "description": "Graphical models, Bayesian inference, and scalable algorithms for reliable reasoning under uncertainty.",
+      "formula": "p(z | x) ∝ p(x | z)p(z)"
+    },
+    {
+      "id": "generative-modeling",
+      "index": "02",
+      "label": "Generation",
+      "title": "Generative modeling",
+      "titleZh": "生成建模",
+      "description": "Diffusion models, score-based methods, and flow matching for expressive and efficient generation.",
+      "formula": "noise → data"
+    },
+    {
+      "id": "inverse-problems",
+      "index": "03",
+      "label": "Reconstruction",
+      "title": "Inverse problems",
+      "titleZh": "逆问题",
+      "description": "Generative priors for compressed sensing, image restoration, and uncertainty-aware reconstruction.",
+      "formula": "y = A(x) + ε"
+    },
+    {
+      "id": "language-agents",
+      "index": "04",
+      "label": "Intelligence",
+      "title": "Language models & agents",
+      "titleZh": "语言模型与智能体",
+      "description": "Diffusion language models, multimodal reasoning, and agentic systems that plan and act efficiently.",
+      "formula": "reason · plan · act"
+    }
+  ],
+  "publications": [
+    {
+      "year": "2025",
+      "venue": "ACML 2024 · PMLR",
+      "title": "Diffusion Model Based Posterior Sampling for Noisy Linear Inverse Problems",
+      "authors": "Xiangming Meng, Yoshiyuki Kabashima",
+      "summary": "A closed-form likelihood-score approximation for faster posterior sampling with diffusion and flow-based priors.",
+      "url": "https://proceedings.mlr.press/v260/meng25a.html"
+    },
+    {
+      "year": "2023",
+      "venue": "ICLR",
+      "title": "Quantized Compressed Sensing with Score-Based Generative Models",
+      "authors": "Xiangming Meng, Yoshiyuki Kabashima",
+      "summary": "Score-based generative priors for reconstructing high-dimensional signals from noisy, quantized measurements.",
+      "url": "https://openreview.net/forum?id=OOWLRfAI_V_"
+    },
+    {
+      "year": "2021",
+      "venue": "NeurIPS",
+      "title": "Ising Model Selection Using ℓ₁-Regularized Linear Regression: A Statistical Mechanics Analysis",
+      "authors": "Xiangming Meng, Tomoyuki Obuchi, Yoshiyuki Kabashima",
+      "summary": "A statistical-mechanics account of sample complexity and finite-size learning behavior in Ising model selection.",
+      "url": "https://proceedings.neurips.cc/paper/2021/hash/31917677a66c6eddd3ab1f68b0679e2f-Abstract.html"
+    }
+  ],
+  "people": [
+    {
+      "name": "Xiangming Meng",
+      "nameZh": "孟祥明",
+      "initials": "XM",
+      "role": "Principal Investigator",
+      "title": "Research Professor · Assistant Professor · PhD Supervisor",
+      "affiliation": "ZJU–UIUC Institute, Zhejiang University",
+      "bio": "Research at the intersection of machine learning, information theory, signal processing, and statistical mechanics.",
+      "email": "xiangmingmeng@intl.zju.edu.cn",
+      "homepage": "https://mengxiangming.github.io/",
+      "profile": "https://person.zju.edu.cn/xiangmingmeng"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026.09.29",
+      "type": "Website",
+      "title": "The first version of the PIL Lab website is online.",
+      "url": "#top"
+    },
+    {
+      "date": "2026.09.12",
+      "type": "Open resource",
+      "title": "Diffusion + Flow Reading Map launched with a curated learning-resources section.",
+      "url": "https://zju-pil-lab.github.io/diffusion-flow-reading-map/"
+    },
+    {
+      "date": "2026.09.04",
+      "type": "Open resource",
+      "title": "dLLM Reading Map launched for students and researchers.",
+      "url": "https://zju-pil-lab.github.io/dllm-reading-map/"
+    }
+  ],
+  "resources": [
+    {
+      "index": "01",
+      "label": "Reading map",
+      "title": "dLLM Reading Map",
+      "titleZh": "扩散语言模型阅读地图",
+      "description": "A student-friendly route through diffusion language models, from foundations to agents and current research.",
+      "meta": "106 papers · 12-paper core path",
+      "url": "https://zju-pil-lab.github.io/dllm-reading-map/",
+      "github": "https://github.com/zju-pil-lab/dllm-reading-map"
+    },
+    {
+      "index": "02",
+      "label": "Reading map",
+      "title": "Diffusion + Flow Reading Map",
+      "titleZh": "扩散模型与流匹配论文导航",
+      "description": "A method-first map of diffusion, score-based modeling, Flow Matching, Rectified Flow, and learning resources.",
+      "meta": "108 papers · books, courses & tutorials",
+      "url": "https://zju-pil-lab.github.io/diffusion-flow-reading-map/",
+      "github": "https://github.com/zju-pil-lab/diffusion-flow-reading-map"
+    }
+  ]
+}
