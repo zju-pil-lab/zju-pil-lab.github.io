@@ -12,6 +12,7 @@ for (const key of requiredCollections) {
 }
 
 const externalUrls = [];
+for (const area of data.research) externalUrls.push(area.related.url);
 for (const publication of data.publications) {
   externalUrls.push(publication.url);
   if (publication.code) externalUrls.push(publication.code);
