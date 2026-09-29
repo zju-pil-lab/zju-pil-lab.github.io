@@ -108,7 +108,8 @@
       "title": "Ising Model Selection Using ℓ₁-Regularized Linear Regression: A Statistical Mechanics Analysis",
       "authors": "Xiangming Meng, Tomoyuki Obuchi, Yoshiyuki Kabashima",
       "summary": "Replica analysis characterizes O(log N) sample complexity and finite-sample precision and recall for Ising graph recovery.",
-      "url": "https://proceedings.neurips.cc/paper/2021/hash/31917677a66c6eddd3ab1f68b0679e2f-Abstract.html"
+      "url": "https://proceedings.neurips.cc/paper/2021/hash/31917677a66c6eddd3ab1f68b0679e2f-Abstract.html",
+      "code": "https://github.com/zju-pil-lab/ising-model-selection"
     },
     {
       "year": "2021",
