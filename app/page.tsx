@@ -3,16 +3,15 @@ import ThemeToggle from '@/components/theme-toggle';
 import siteData from '@/data/site.json';
 
 const externalProps = { target: '_blank', rel: 'noreferrer' } as const;
-type NewsItem = (typeof siteData.news)[number];
 
 export default function Home() {
   const pi = siteData.principalInvestigator;
   const phdStudents = siteData.people.filter((person) => person.group === 'phd');
   const mastersStudents = siteData.people.filter((person) => person.group === 'master');
-  const latestUpdates = [
-    siteData.news.find((item) => item.type === 'Publication'),
-    siteData.news.find((item) => item.type !== 'Website' && item.type !== 'Publication'),
-  ].filter((item): item is NewsItem => Boolean(item));
+  const latestUpdates = [...siteData.news]
+    .filter((item) => item.type !== 'Website')
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 2);
 
   return (
     <div id="top">
