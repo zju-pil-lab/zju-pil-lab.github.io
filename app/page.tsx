@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import NewsList from '@/components/news-list';
 import ThemeToggle from '@/components/theme-toggle';
 import siteData from '@/data/site.json';
 
@@ -55,7 +56,7 @@ export default function Home() {
         <aside className="hero-updates" aria-label="Latest lab updates">
           <div className="update-heading">
             <h2>Latest updates</h2>
-            <a href="#news">All news</a>
+            <a href="#news">News archive</a>
           </div>
           {latestUpdates.map((item) => (
             <a className="update-item" href={item.url} {...externalProps} key={`${item.date}-${item.title}`}>
@@ -274,18 +275,7 @@ export default function Home() {
             <h2 id="news-title">Lab news</h2>
           </header>
           <div className="section-body">
-            <div className="news-list">
-              {siteData.news.map((item) => {
-                const isExternal = item.url.startsWith('https://');
-                return (
-                  <a href={item.url} {...(isExternal ? externalProps : {})} className="news-row" key={`${item.date}-${item.title}`}>
-                    <time>{item.date}</time>
-                    <span>{item.type}</span>
-                    <p>{item.title}</p>
-                  </a>
-                );
-              })}
-            </div>
+            <NewsList items={siteData.news} />
             <p className="news-note">{siteData.newsNote}</p>
             <a className="section-link" href={pi.homepage} {...externalProps}>More updates on the PI homepage ↗</a>
           </div>

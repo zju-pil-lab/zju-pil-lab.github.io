@@ -442,6 +442,22 @@ html[data-theme='dark'] .theme-icon-sun { display: block; }
 .news-row > span { color: var(--blue); font-weight: 700; text-transform: uppercase; }
 .news-row p { font-family: Georgia, 'Times New Roman', 'Songti SC', serif; font-size: 15px; line-height: 1.5; margin: 0; }
 .news-row:hover p { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.news-row[hidden] { display: none; }
+.news-toggle {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--blue);
+  color: var(--blue);
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: .04em;
+  margin-top: 18px;
+  padding: 0 0 4px;
+  text-transform: uppercase;
+}
+.news-toggle:hover { border-color: var(--blue-dark); color: var(--blue-dark); }
+.news-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
 .news-note { color: var(--muted); font-size: 10px; line-height: 1.5; margin: 18px 0 0; }
 .news-section .section-link { display: inline-block; margin-top: 17px; }
 
