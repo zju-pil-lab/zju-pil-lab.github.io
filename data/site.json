@@ -251,6 +251,12 @@
       "url": "#top"
     },
     {
+      "date": "2026.09.27",
+      "type": "Preprint",
+      "title": "Our new preprint, One Latent, Many Tokens: Jointly Learning Compressed Embeddings for Efficient Language Diffusion, is now available on arXiv.",
+      "url": "https://arxiv.org/abs/2609.33698"
+    },
+    {
       "date": "2026.09.25",
       "type": "Publication",
       "title": "Visual-Redundancy-Controlled Parallel Decoding for Diffusion-Based Multimodal Large Language Models was accepted to NeurIPS 2026.",
