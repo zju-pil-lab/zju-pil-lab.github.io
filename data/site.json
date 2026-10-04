@@ -323,7 +323,7 @@
       "title": "Diffusion + Flow Reading Map",
       "titleZh": "扩散模型与流匹配论文导航",
       "description": "A structured reading list on diffusion models, score-based modeling, flow matching, and rectified flow.",
-      "meta": "109 papers · books, courses & tutorials",
+      "meta": "110 papers · books, courses & tutorials",
       "url": "https://zju-pil-lab.github.io/diffusion-flow-reading-map/",
       "github": "https://github.com/zju-pil-lab/diffusion-flow-reading-map"
     }
