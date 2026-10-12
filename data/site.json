@@ -313,7 +313,7 @@
       "title": "dLLM Reading Map",
       "titleZh": "扩散语言模型阅读地图",
       "description": "A structured reading list on diffusion language models, covering foundations, methods, applications, and agents.",
-      "meta": "117 papers · 12-paper core path",
+      "meta": "107 papers · 12-paper core path",
       "url": "https://zju-pil-lab.github.io/dllm-reading-map/",
       "github": "https://github.com/zju-pil-lab/dllm-reading-map"
     },
@@ -323,7 +323,7 @@
       "title": "Diffusion + Flow Reading Map",
       "titleZh": "扩散模型与流匹配论文导航",
       "description": "A structured reading list on diffusion models, score-based modeling, flow matching, and rectified flow.",
-      "meta": "111 papers · books, courses & tutorials",
+      "meta": "115 papers · books, courses & tutorials",
       "url": "https://zju-pil-lab.github.io/diffusion-flow-reading-map/",
       "github": "https://github.com/zju-pil-lab/diffusion-flow-reading-map"
     }
