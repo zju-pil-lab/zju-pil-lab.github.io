@@ -136,6 +136,14 @@
       "summary": "Expectation propagation reduces generalized linear models to standard linear subproblems and unifies several message-passing algorithms.",
       "url": "https://arxiv.org/abs/1712.10288",
       "code": "https://github.com/mengxiangming/glmcode"
+    },
+    {
+      "year": "2015",
+      "venue": "IEEE Signal Processing Letters (SPL)",
+      "title": "An Expectation Propagation Perspective on Approximate Message Passing",
+      "authors": "Xiangming Meng, Sheng Wu, Linling Kuang, Jianhua Lu",
+      "summary": "An expectation-propagation derivation in the large-system limit yields an equivalent form of AMP and establishes the connection between the two inference methods.",
+      "url": "https://ieeexplore.ieee.org/document/7008468"
     }
   ],
   "principalInvestigator": {
