@@ -321,7 +321,7 @@
       "title": "dLLM Reading Map",
       "titleZh": "扩散语言模型阅读地图",
       "description": "A structured reading list on diffusion language models, covering foundations, methods, applications, and agents.",
-      "meta": "113 papers · 12-paper core path",
+      "meta": "114 papers · 12-paper core path",
       "url": "https://zju-pil-lab.github.io/dllm-reading-map/",
       "github": "https://github.com/zju-pil-lab/dllm-reading-map"
     },
