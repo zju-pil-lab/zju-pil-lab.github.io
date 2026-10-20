@@ -242,12 +242,12 @@ export default function Home() {
 
         <section className="standard-section resource-section" id="resources" aria-labelledby="resources-title">
           <header className="section-title">
-            <h2 id="resources-title">Reading maps</h2>
+            <h2 id="resources-title">Open resources</h2>
           </header>
           <div className="section-body">
             <p className="section-intro">
-              PIL Lab maintains two public reading maps for diffusion language models, diffusion models,
-              and flow matching.
+              PIL Lab maintains public reading maps on generative models and a curated directory of
+              research tools and workflows.
             </p>
             <div className="resource-list">
               {siteData.resources.map((resource) => (

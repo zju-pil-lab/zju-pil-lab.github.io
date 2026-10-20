@@ -334,6 +334,16 @@
       "meta": "123 papers · books, courses & tutorials",
       "url": "https://zju-pil-lab.github.io/diffusion-flow-reading-map/",
       "github": "https://github.com/zju-pil-lab/diffusion-flow-reading-map"
+    },
+    {
+      "index": "03",
+      "label": "Research toolkit",
+      "title": "PIL Research Toolkit",
+      "titleZh": "AI 科研工具与工作流",
+      "description": "A curated directory of research agents, scientific computing tools, literature resources, and reproducible workflows, with usage notes and verification status.",
+      "meta": "12 resources · 4 research tasks",
+      "url": "https://zju-pil-lab.github.io/research-toolkit/",
+      "github": "https://github.com/zju-pil-lab/research-toolkit"
     }
   ]
 }
