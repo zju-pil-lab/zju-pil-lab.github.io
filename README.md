@@ -23,6 +23,8 @@ npm run build
 
 Research areas, PI details, publications, member groups, news, and open resources are maintained in `data/site.json`. Portraits live in `public/people/`. Content should be linked to a primary source and member information should only be published after confirmation.
 
-The content validator checks primary-source URLs, local portrait files, duplicate members, and the current 4 PhD / 6 master's roster before each deployment.
+Former members are maintained separately in `alumni` and displayed under **Alumni · 往届成员**, with names linked to their personal homepages. Record their former lab role; do not infer degree completion or invent participation dates. Alumni are not included in current-member counts.
+
+The content validator checks primary-source URLs, local portrait files, duplicate names and homepages across current and former members, and the current 4 PhD / 6 master's roster before each deployment.
 
 Pushing to `main` validates, builds, and deploys the static site through GitHub Actions.

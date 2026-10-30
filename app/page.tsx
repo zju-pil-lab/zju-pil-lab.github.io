@@ -237,6 +237,29 @@ export default function Home() {
                 ))}
               </div>
             </div>
+
+            {siteData.alumni.length > 0 && (
+              <section className="student-group alumni-group" id="alumni" aria-labelledby="alumni-title">
+                <div className="student-heading">
+                  <h3 id="alumni-title">Alumni <span>往届成员</span></h3>
+                  <p>{siteData.alumni.length} former {siteData.alumni.length === 1 ? 'member' : 'members'}</p>
+                </div>
+                <div className="visitor-list">
+                  {siteData.alumni.map((person) => (
+                    <article className="visitor-row alumni-row" key={person.homepage}>
+                      <div>
+                        <h4>
+                          <a href={person.homepage} {...externalProps}>
+                            {person.name} <span>{person.nameZh}</span>
+                          </a>
+                        </h4>
+                        <p>{person.role}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
         </section>
 

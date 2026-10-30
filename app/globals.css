@@ -413,6 +413,7 @@ html[data-theme='dark'] .theme-icon-sun { display: block; }
 .visitor-row time { color: var(--muted); font-size: 12px; margin: 7px 0 0; }
 .visitor-row > p { margin: 0; }
 .visitor-row time { margin: 0; white-space: nowrap; }
+.alumni-row { grid-template-columns: 1fr; }
 
 .resource-list { border-top: 1px solid var(--ink); }
 .resource-item {

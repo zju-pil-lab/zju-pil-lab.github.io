@@ -36,6 +36,16 @@ for (const visitor of data.visitingStudents) {
   externalUrls.push(visitor.homepage);
 }
 
+if (!Array.isArray(data.alumni)) throw new Error('alumni must be an array');
+for (const person of data.alumni) {
+  for (const field of ['name', 'nameZh', 'role', 'roleZh']) {
+    if (typeof person[field] !== 'string' || !person[field].trim()) {
+      throw new Error(`Incomplete alumni record: ${person.name || '(unnamed)'} is missing ${field}`);
+    }
+  }
+  externalUrls.push(person.homepage);
+}
+
 for (const image of localImages) {
   if (typeof image !== 'string' || !image.startsWith('/people/')) throw new Error(`Invalid local image path: ${image}`);
   if (!fs.existsSync(path.resolve('public', image.slice(1)))) throw new Error(`Missing local image: ${image}`);
@@ -56,9 +66,12 @@ for (const url of externalUrls) {
 const ids = data.research.map((item) => item.id);
 if (new Set(ids).size !== ids.length) throw new Error('Duplicate research IDs');
 
-const names = data.people.map((person) => person.name);
+const allPeople = [pi, ...data.people, ...data.visitingStudents, ...data.alumni];
+const names = allPeople.map((person) => person.name);
+const homepages = allPeople.map((person) => person.homepage).filter(Boolean);
 const photos = data.people.map((person) => person.photo);
 if (new Set(names).size !== names.length) throw new Error('Duplicate member names');
+if (new Set(homepages).size !== homepages.length) throw new Error('Duplicate member homepages across current and former members');
 if (new Set(photos).size !== photos.length) throw new Error('Duplicate member photos');
 
 const phdCount = data.people.filter((person) => person.group === 'phd').length;
@@ -69,6 +82,6 @@ if (phdCount !== 4 || mastersCount !== 6) {
 
 console.log(
   `Validated ${data.research.length} research areas, ${data.publications.length} publications, ` +
-  `1 PI, ${data.people.length} students, ${data.visitingStudents.length} visiting student, ` +
+  `1 PI, ${data.people.length} students, ${data.visitingStudents.length} visiting student, ${data.alumni.length} alumni, ` +
   `${data.news.length} news items, and ${data.resources.length} resources.`,
 );
